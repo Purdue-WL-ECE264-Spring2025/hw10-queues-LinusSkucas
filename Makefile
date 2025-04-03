@@ -14,3 +14,14 @@ clean:
 
 %.o: %.c $(HEADERS)
 	$(CC) -c $< -o $@ $(CFLAGS)
+
+test1: $(APP)
+	./$(APP) testcases/1.txt
+
+test2: $(APP)
+	./$(APP) testcases/2.txt
+
+test3: $(APP)
+	./$(APP) testcases/3.txt
+
+test: test1 test2 test3
